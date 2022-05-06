@@ -10,20 +10,7 @@ class MyDocument extends Document {
     render() {
         const consentMode = `
             const hasCookie = document.cookie.match(/^(.*;)?\s*CookieConsent\s*=\s*[^;]+(.*)?$/);
-            console.log(hasCookie);
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("consent", "default", {
-                ad_storage: "denied",
-                analytics_storage: "denied",
-                functionality_storage: "denied",
-                personalization_storage: "denied",
-                security_storage: "granted",
-                wait_for_update: 500,
-            });
-            gtag("set", "ads_data_redaction", true);`;
+            console.log(hasCookie);`;
         const gtm = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -37,11 +24,11 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <title>Next.js + GTM</title>
-                    {/* <script 
+                    <script 
                         data-cookieconsent="ignore"
                         dangerouslySetInnerHTML={
                             { __html: consentMode }
-                        } /> */}
+                        } />
                     <script 
                         data-cookieconsent="ignore"
                         dangerouslySetInnerHTML={
