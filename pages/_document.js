@@ -8,7 +8,10 @@ class MyDocument extends Document {
     }
 
     render() {
-        const consentMode = `window.dataLayer = window.dataLayer || [];
+        const consentMode = `
+            const hasCookie = document.cookie.match(/^(.*;)?\s*CookieConsent\s*=\s*[^;]+(.*)?$/);
+            console.log(hasCookie);
+            window.dataLayer = window.dataLayer || [];
             function gtag() {
                 dataLayer.push(arguments);
             }
