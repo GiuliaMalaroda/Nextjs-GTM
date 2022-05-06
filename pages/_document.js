@@ -10,7 +10,8 @@ class MyDocument extends Document {
     render() {
         const consentMode = `
             const hasCookie = document.cookie.match(/^(.*;)?\s*CookieConsent\s*=\s*[^;]+(.*)?$/);
-            console.log(hasCookie);`;
+            console.log(hasCookie);
+            dataLayer.push({event: "giuliamalaroda_test"})`;
         const gtm = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
