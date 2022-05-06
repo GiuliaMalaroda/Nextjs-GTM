@@ -34,11 +34,11 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <title>Next.js + GTM</title>
-                    <script 
+                    {/* <script 
                         data-cookieconsent="ignore"
                         dangerouslySetInnerHTML={
                             { __html: consentMode }
-                        } />
+                        } /> */}
                     <script 
                         data-cookieconsent="ignore"
                         dangerouslySetInnerHTML={
